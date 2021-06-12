@@ -1,13 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 using Shopping.API.Data;
 using Shopping.API.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Shopping.API.Controllers
 {
