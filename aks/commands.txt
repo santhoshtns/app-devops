@@ -4,3 +4,10 @@ docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
 stop docker containers using docker compose
 docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
 
+
+moving from local k8s to aks
+1. change the image path to acr path
+2. read imagePullSecret
+3. remove nodeport in service type
+4. targetPort in service also not required. each pod gets a new ip
+5. change port to default 80

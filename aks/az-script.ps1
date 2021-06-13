@@ -49,3 +49,7 @@ az aks intall-cli
 
 # get context
 az aks get-credentials --resource-group $resourceGroup --name $aksname
+
+# create secrets for docker related creds
+# password might be wrong
+kubectl create secret docker-registry acr-secret --docker-server=$acrfullname --docker-username=$registryname --docker-password=jxRN05QKSge2yXx5Tb=YT64Zfx2 --docker-email=san.tn@gmail.com
