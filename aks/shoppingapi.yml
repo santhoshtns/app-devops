@@ -14,12 +14,12 @@ spec:
       labels:
         app: shoppingapi
     spec:
+      imagePullSecrets:
+        - name: acr-secret
       containers:
         - name: shoppingapi
           image: shoppacr.azurecr.io/shoppingapi:v1
           imagePullPolicy: IfNotPresent
-          imagePullSecrets:
-            - name: acr-secret
           env:
             - name: ASPNETCORE_ENVIRONMENT
               valueFrom:
