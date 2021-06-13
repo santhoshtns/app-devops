@@ -1,0 +1,6 @@
+create docker images
+docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
+
+stop docker containers using docker compose
+docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
+
