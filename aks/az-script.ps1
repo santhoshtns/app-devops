@@ -1,6 +1,8 @@
 $resourceGroup = 'shopping-rg'
 $registryname = 'shoppacr'
 $acrfullname = 'shoppacr.azurecr.io'
+$aksname = 'shopp-aks'
+$nodes = 1
 
 $account = az account show
 $account
@@ -38,3 +40,12 @@ az acr repository list --name $registryname --output table
 # show tags
 az acr repository show-tags --name $registryname --repository shoppingclient --output table
 az acr repository show-tags --name $registryname --repository shoppingapi --output table
+
+# create aks and attach to acr.this will take few mins
+az aks create --resource-group $resourceGroup --name $aksname --node-count $nodes --generate-ssh-keys --attach-acr $registryname
+
+# install az cli for aks
+az aks intall-cli
+
+# get context
+az aks get-credentials --resource-group $resourceGroup --name $aksname
