@@ -4,3 +4,4 @@ metadata:
   name: shoppingapi-configmap
 data:
   environment: Development
+  shoppingap_iurl: http://shoppingapi-service
