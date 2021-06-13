@@ -20,9 +20,15 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
             - name: ASPNETCORE_ENVIRONMENT
-              value: Development
+              valueFrom:
+                configMapKeyRef:
+                  key: environment
+                  name: shoppingapi-configmap
             - name: DatabaseSettings__ConnectionString
-              value: mongodb://username:password@mongodb-service:27017
+              valueFrom:
+                configMapKeyRef:
+                  key: connection_string
+                  name: mongo-configmap
           resources:
             requests:
               memory: "64Mi"
