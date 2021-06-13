@@ -4,4 +4,4 @@ metadata:
   name: shoppingapi-configmap
 data:
   environment: Development
-  shoppingapi_url: http://shoppingapi-service:8000
+  shoppingapi_url: http://shoppingapi-service:8100
