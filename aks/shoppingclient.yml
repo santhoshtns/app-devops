@@ -27,7 +27,7 @@ spec:
                   key: shoppingapi_url
                   name: shoppingapi-configmap
             - name: ASPNETCORE_ENVIRONMENT
-              value: Development
+              value: Production
           resources:
             limits:
               memory: "128Mi"

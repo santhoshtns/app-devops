@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: shoppingapi-configmap
 data:
-  environment: Development
-  shoppingapi_url: http://shoppingapi-service:8100
+  environment: Production
+  shoppingapi_url: http://shoppingapi-service
